@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IHM</string>
+    <string name="title_accueil">Accueil</string>
+    <string name="title_profil">Profil</string>
+    <string name="title_historique">Historique</string>
+    <string name="title_favoris">Favoris</string>
+</resources>
