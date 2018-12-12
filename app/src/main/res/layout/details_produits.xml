@@ -35,16 +35,6 @@
             android:text="Chips Lays Classic"
             android:textSize="20dp" />
 
-        <ProgressBar
-            android:id="@+id/progressBar2"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="320dp"
-            android:layout_height="40dp"
-            android:layout_alignStart="@+id/imageView"
-            android:layout_below="@+id/imageView"
-            android:progress="20"
-            android:progressTint="@android:color/holo_red_dark" />
-
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="25dp"
@@ -99,6 +89,20 @@
             android:text="Notation"
             tools:text="Notation" />
 
+        <SeekBar
+            android:id="@+id/seekBar3"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_below="@+id/imageView"
+            android:backgroundTint="@color/warningColor"
+            android:max="5"
+            android:progress="1"
+            android:progressBackgroundTint="@color/warningColor"
+            android:progressTint="@color/warningColor"
+            android:tickMarkTint="@color/warningColor" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -119,7 +123,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="11dp"
-            android:text="Allergenes"
+            android:text="Allergènes"
             android:textSize="20dp" />
 
         <TextView
@@ -131,7 +135,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="13dp"
             android:layout_toEndOf="@+id/imageView2"
-            android:text="Presence de gluten" />
+            android:text="Présence de gluten" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -149,10 +153,10 @@
     <RelativeLayout
         android:id="@+id/layoutQualite"
         android:layout_width="371dp"
-        android:layout_height="96dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/layoutAllergenes"
-        android:layout_marginBottom="68dp">
+        android:layout_height="110dp"
+        android:layout_alignStart="@+id/layoutDefauts"
+        android:layout_below="@+id/layoutDefauts"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/textView12"
@@ -169,20 +173,58 @@
             style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/textView13"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="11dp"
-            android:text="Qualites"
+            android:layout_marginStart="13dp"
+            android:text="Qualités"
             android:textSize="20dp" />
+
+        <TextView
+            style="@style/text"
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView9"
+            android:layout_centerVertical="true"
+            android:text="Label bio" />
+
+        <TextView
+            style="@style/text"
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView13"
+            android:layout_below="@+id/textView13"
+            android:text="Produit végétarien" />
+
+        <TextView
+            style="@style/text"
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView14"
+            android:layout_below="@+id/textView14"
+            android:text="Peu sucré" />
+
+        <TextView
+            style="@style/text"
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView14"
+            android:text="TextView"
+            tools:text="1,2 g" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layoutDefauts"
         android:layout_width="371dp"
-        android:layout_height="96dp"
-        android:layout_above="@+id/layoutQualite"
-        android:layout_alignStart="@+id/layoutQualite">
+        android:layout_height="85dp"
+        android:layout_alignEnd="@+id/layoutAllergenes"
+        android:layout_below="@+id/layoutAllergenes"
+        android:layout_marginTop="15dp">
 
         <TextView
             android:id="@+id/textView8"
@@ -192,15 +234,54 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="11dp"
-            android:text="Defauts"
+            android:text="Défauts"
             android:textSize="20dp" />
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView8" />
+            android:layout_above="@+id/imageView3"
+            android:layout_alignStart="@+id/textView8"
+            android:isScrollContainer="true" />
+
+        <TextView
+            android:id="@+id/textView17"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="/100 g"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView8"
+            android:layout_marginStart="11dp"
+            app:srcCompat="@drawable/ic_dashboard_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_toEndOf="@+id/imageView3"
+            android:text="Trop salé" />
+
+        <TextView
+            android:id="@+id/textView21"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/spinner"
+            android:text="1,3 g" />
 
     </RelativeLayout>
+
 </RelativeLayout>

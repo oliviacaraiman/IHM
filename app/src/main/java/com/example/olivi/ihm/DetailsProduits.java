@@ -3,13 +3,19 @@ package com.example.olivi.ihm;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by olivi on 12/12/2018.
@@ -36,5 +42,16 @@ public class DetailsProduits extends Fragment{
                 ft.commit();
             }
         });
+
+        Spinner spinner = (Spinner)view.findViewById(R.id.spinner);
+        //Création d'une liste d'élément à mettre dans le Spinner(pour l'exemple)
+        List defautsList = new ArrayList();
+        defautsList.add("2 additifs");
+        defautsList.add("E215");
+        defautsList.add("E110");
+
+        ArrayAdapter adapter = new ArrayAdapter(this.getContext(),android.R.layout.simple_spinner_item,defautsList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
     }
 }

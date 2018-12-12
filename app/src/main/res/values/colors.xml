@@ -6,4 +6,5 @@
     <color name="textColor">#FF050505</color>
     <color name="buttonColor">#75ad6c</color>
     <color name="warningColor">#c3212c</color>
+    <color name="tickColor">#4e4e4e</color>
 </resources>

@@ -6,6 +6,8 @@ package com.example.olivi.ihm;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -33,6 +35,7 @@ import android.widget.TextView;
             this.fragment = fr;
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.O)
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) context
@@ -44,12 +47,19 @@ import android.widget.TextView;
             textView.setText(products[position]);
             imageView.setImageResource(R.drawable.ic_dashboard_black_24dp);
             progressBar.setProgress(barValues[position]);
+            progressBar.setMax(5);
 
-            if (barValues[position] <= 30) {
-                progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
-            } else if ((barValues[position] < 60) && (barValues[position] > 30))
-                progressBar.setProgressTintList(ColorStateList.valueOf(Color.YELLOW));
-            else progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+            if (barValues[position] < 3) {
+                progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#c3212c")));
+                progressBar.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#c3212c")));
+            } else if ((barValues[position] < 4) && (barValues[position] >=3)) {
+                progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#FFE9C563")));
+                progressBar.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFE9C563")));
+            }
+            else {
+                progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#FF8AAC2D")));
+                progressBar.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF8AAC2D")));
+            }
 
             Button button = (Button)rowView.findViewById(R.id.buttonDetails);
             button.setOnClickListener(new View.OnClickListener() {
