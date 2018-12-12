@@ -34,12 +34,13 @@
 
     <Button
         style="@style/buttons"
-        android:id="@+id/button"
+        android:id="@+id/buttonDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/progressBar"
         android:layout_below="@+id/progressBar"
         android:layout_marginStart="152dp"
-        android:text="Détails" />
+        android:text="Détails"
+        />
 
 </RelativeLayout>

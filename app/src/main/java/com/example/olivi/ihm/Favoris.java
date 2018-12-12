@@ -20,7 +20,7 @@ public class Favoris extends ListFragment {
 
         String[] products = {"Lays Classic","Pizza 4 saisons","Houmous Carrefour"};
         int[] values = {25,90,50};
-        ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values);
+        ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values, this);
         View rootView = inflater.inflate(R.layout.historique, container, false);
         TextView title = rootView.findViewById(R.id.textView);
         title.setText("Favoris");
