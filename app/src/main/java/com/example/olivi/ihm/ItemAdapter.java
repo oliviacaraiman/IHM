@@ -24,14 +24,15 @@ import android.widget.TextView;
         private final Context context;
         private final String[] products;
         private final int[] barValues;
+        private final int[] images;
         private final Fragment fragment;
 
-
-        public ItemAdapter(Context context, String[] products, int[] barValues, Fragment fr) {
+        public ItemAdapter(Context context, String[] products, int[] barValues, int[] images, Fragment fr) {
             super(context, -1, products);
             this.context = context;
             this.products = products;
             this.barValues = barValues;
+            this.images = images;
             this.fragment = fr;
         }
 
@@ -45,7 +46,7 @@ import android.widget.TextView;
             ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
             ProgressBar progressBar = rowView.findViewById(R.id.progressBar);
             textView.setText(products[position]);
-            imageView.setImageResource(R.drawable.ic_dashboard_black_24dp);
+            imageView.setImageResource(images[position]);
             progressBar.setProgress(barValues[position]);
             progressBar.setMax(5);
 
