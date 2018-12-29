@@ -20,7 +20,8 @@ public class Favoris extends ListFragment {
 
         String[] products = {"Lays Classic","Pizza 4 saisons","Houmous Carrefour"};
         int[] values = {1,4,3};
-        ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values, this);
+        int[] images = {R.mipmap.lays_light, R.mipmap.pizza, R.mipmap.houmous};
+        ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values, images, this);
         View rootView = inflater.inflate(R.layout.historique, container, false);
         TextView title = rootView.findViewById(R.id.textView);
         title.setText("Favoris");
