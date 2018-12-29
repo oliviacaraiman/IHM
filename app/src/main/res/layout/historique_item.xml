@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="100dp">
 
@@ -8,7 +9,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="4px"
-        android:layout_marginTop="4px"></ImageView>
+        android:layout_marginTop="4px"/>
 
     <TextView
         android:id="@+id/label"
@@ -18,7 +19,7 @@
         android:layout_alignStart="@+id/progressBar"
         android:layout_alignTop="@+id/icon"
         android:text="@+id/label"
-        android:textSize="15sp"></TextView>
+        android:textSize="15sp"/>
 
     <SeekBar
         android:id="@+id/progressBar"
@@ -28,8 +29,13 @@
         android:layout_below="@+id/label"
         android:layout_marginStart="20dp"
         android:layout_toEndOf="@+id/icon"
+        android:height="30dp"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
         android:thumbTint="@color/tickColor"
-        android:tickMarkTint="@color/tickColor"/>
+        android:tickMarkTint="@color/tickColor" />
 
     <Button
         android:id="@+id/buttonDetails"
@@ -38,6 +44,9 @@
         android:layout_height="30dp"
         android:layout_alignBottom="@+id/icon"
         android:layout_alignEnd="@+id/progressBar"
-        android:text="Détails" />
+        android:layout_marginBottom="5dp"
+        android:shadowColor="@android:color/darker_gray"
+        android:text="Détails"
+        android:textStyle="normal" />
 
 </RelativeLayout>

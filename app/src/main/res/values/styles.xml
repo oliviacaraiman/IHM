@@ -9,23 +9,23 @@
     </style>
     <style name="title">
         <item name="android:textColor">@color/textColor</item>
-        <item name="android:textSize">22dp</item>
+        <item name="android:textSize">25dp</item>
         <item name="android:gravity">center</item>
     </style>
     <style name="text">
         <item name="android:textColor">@color/textColor</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">17dp</item>
     </style>
     <style name="buttons">
         <item name="android:textColor">@color/textColor</item>
         <item name="android:background">@color/buttonColor</item>
-        <item name="android:radius">10dp</item>
+        <item name="android:radius">15dp</item>
         <item name="android:textSize">15dp</item>
     </style>
 
     <style name="warningText">
         <item name="android:textColor">@color/warningColor</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">17dp</item>
     </style>
 
 
