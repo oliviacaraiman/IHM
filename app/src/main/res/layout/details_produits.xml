@@ -262,7 +262,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/textView8"
             android:layout_marginStart="11dp"
-            app:srcCompat="@drawable/ic_dashboard_black_24dp" />
+            app:srcCompat="@drawable/ic_salt_22dp" />
 
         <TextView
             android:id="@+id/textView20"
