@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*
         // on first launch : marche pas encore
         Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                 .putBoolean("isFirstRun", false).commit();
         //-- on first launch
-
+        */
         setContentView(R.layout.activity_main);
         ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content, new DetailsProduits());
