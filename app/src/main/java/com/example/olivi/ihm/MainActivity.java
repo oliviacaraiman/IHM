@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_accueil:
                     ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.content, new DetailsProduits());
+                    ft.replace(R.id.content, new Accueil());
                     ft.commit();
                     return true;
                 case R.id.navigation_profil:
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // on first launch : marche pas encore
-        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+        /*Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
         if (isFirstRun) {
             startActivity(new Intent(MainActivity.this, FIrstLoad.class));
@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
                     .show();
         }
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("isFirstRun", false).commit();
+                .putBoolean("isFirstRun", false).commit();*/
         //-- on first launch
 
         setContentView(R.layout.activity_main);
         ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.content, new DetailsProduits());
+        ft.replace(R.id.content, new Accueil());
         ft.commit();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
