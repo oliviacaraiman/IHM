@@ -313,7 +313,7 @@
             android:layout_alignStart="@+id/textView8"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
-            app:srcCompat="@drawable/ic_dashboard_black_24dp" />
+            app:srcCompat="@drawable/ic_salt_22dp" />
 
         <TextView
             android:id="@+id/textView20"
