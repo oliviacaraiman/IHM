@@ -9,8 +9,8 @@
         android:id="@+id/layoutProduit"
         android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:background="@drawable/border"
         android:paddingBottom="5dp"
@@ -36,22 +36,25 @@
             android:text="Chips Lays Classic"
             android:textSize="28dp" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_above="@+id/imageButton3"
+        <ToggleButton
+            android:id="@+id/button_favorite"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignEnd="@+id/textView2"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            android:layout_below="@+id/textView2"
+            android:background="@drawable/favorite_button"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
 
         <TextView
             android:id="@+id/textView3"
             style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageButton2"
-            android:layout_marginEnd="11dp"
-            android:layout_toStartOf="@+id/imageButton2"
+            android:layout_below="@+id/textView2"
+            android:layout_toEndOf="@+id/seekBar3"
             android:text="Favoris"
             tools:text="Favoris" />
 
@@ -59,8 +62,9 @@
             android:id="@+id/imageButton3"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_alignStart="@+id/imageButton2"
-            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/button_favorite"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_marginEnd="10dp"
             app:srcCompat="@android:drawable/ic_input_add" />
 
         <TextView
@@ -69,12 +73,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/textView3"
-            android:layout_alignParentRight="false"
-            android:layout_alignParentTop="false"
-            android:layout_alignTop="@id/favoris"
             android:layout_alignWithParentIfMissing="false"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/favoris"
+            android:layout_below="@+id/button_favorite"
             android:text="Alternatives" />
 
         <ImageButton
@@ -83,6 +83,7 @@
             android:layout_height="25dp"
             android:layout_alignStart="@+id/imageButton3"
             android:layout_below="@+id/textView4"
+            android:layout_marginEnd="10dp"
             app:srcCompat="@android:drawable/ic_menu_preferences" />
 
         <TextView
@@ -91,7 +92,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/textView4"
-            android:layout_below="@+id/imageButton3"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="2dp"
             android:text="Notation"
             tools:text="Notation" />
 
