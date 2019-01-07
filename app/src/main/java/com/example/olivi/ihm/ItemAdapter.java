@@ -46,7 +46,7 @@ import android.widget.TextView;
             ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
             ProgressBar progressBar = rowView.findViewById(R.id.progressBar);
             textView.setText(products[position]);
-            textView.setTextSize(20);
+            textView.setTextSize(16);
             imageView.setImageResource(images[position]);
             progressBar.setProgress(barValues[position]);
             progressBar.setMax(5);

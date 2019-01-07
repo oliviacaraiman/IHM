@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IHM</string>
+    <string name="app_name" >Donut Worry</string>
     <string name="title_accueil">Accueil</string>
     <string name="title_profil">Profil</string>
     <string name="title_historique">Historique</string>

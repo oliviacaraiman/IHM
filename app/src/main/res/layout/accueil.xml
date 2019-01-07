@@ -11,30 +11,29 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         tools:visibility="visible">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="312dp"
-            android:layout_height="326dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="55dp"
-            android:visibility="visible"
-            app:srcCompat="@android:drawable/presence_video_online" />
 
         <Button
             android:id="@+id/button2"
+            style="@style/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Scanner un produit" />
+
+        <ImageView
+            android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="414dp"
-            android:layout_marginEnd="126dp"
-            android:layout_weight="1"
-            android:text="Scanner un produit" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="97dp"
+            app:srcCompat="@drawable/scan_app_logo" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -43,18 +42,14 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         android:visibility="gone">
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="281dp"
-            android:layout_height="237dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="86dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/imageButton4"
+            android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/code_barre_web" />
 
         <TextView
@@ -63,32 +58,61 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView7"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="18dp"
-            android:layout_toEndOf="@+id/imageView2"
-            android:text="Présence de gluten" />
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@+id/textView19"
+            android:text="Présence de gluten"
+            android:textSize="18dp" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="339dp"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignStart="@+id/imageView7"
             android:background="@color/warningColor"
             android:backgroundTint="@color/warningColor"
             android:backgroundTintMode="src_over"
             app:srcCompat="@android:drawable/stat_sys_warning" />
 
-        <Button
-            android:id="@+id/button"
+        <TextView
+            android:id="@+id/textView18"
+            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView7"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="40dp"
+            android:layout_alignEnd="@+id/button"
+            android:layout_below="@+id/seekBar3"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="0dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="0dp"
+            android:text="1/5 Mauvais"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            style="@style/text"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBaseline="@+id/textView18"
+            android:layout_alignBottom="@+id/textView18"
+            android:layout_alignStart="@+id/button"
+            android:background="@color/warningColor"
+            android:paddingBottom="8dp"
+            android:text=" "
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="90dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:text="Voir les details" />
 
         <ImageButton
@@ -100,6 +124,21 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textView7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:backgroundTint="@color/warningColor"
+            android:max="5"
+            android:progress="1"
+            android:progressBackgroundTint="@color/warningColor"
+            android:progressTint="@color/warningColor"
+            android:tickMarkTint="@color/warningColor" />
 
     </RelativeLayout>
 

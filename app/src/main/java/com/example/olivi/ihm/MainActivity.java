@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_accueil:
                     ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.content, new DetailsProduits());
+                    ft.replace(R.id.content, new Accueil());
                     ft.commit();
                     return true;
                 case R.id.navigation_profil:
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         */
         setContentView(R.layout.activity_main);
         ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.content, new DetailsProduits());
+        ft.replace(R.id.content, new Accueil());
         ft.commit();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
