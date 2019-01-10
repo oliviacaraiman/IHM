@@ -23,8 +23,8 @@ public class Historique extends ListFragment{
         int[] images = {R.mipmap.lays_light, R.mipmap.pizza, R.mipmap.houmous};
         ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values, images,this);
         View rootView = inflater.inflate(R.layout.historique, container, false);
-        TextView title = rootView.findViewById(R.id.textView);
-        title.setText("Historique");
+/*        TextView title = rootView.findViewById(R.id.textView);
+        title.setText("Historique");*/
         setListAdapter(adapter);
 
         return rootView;

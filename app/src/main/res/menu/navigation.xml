@@ -19,5 +19,4 @@
         android:id="@+id/navigation_favoris"
         android:icon="@drawable/ic_baseline_favorite_24px"
         android:title="@string/title_favoris" />
-ss
 </menu>
