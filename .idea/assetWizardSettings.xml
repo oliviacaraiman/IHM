@@ -58,11 +58,28 @@
                             <entry key="launcherLegacy">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="paddingPercent" value="5" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="D:\IHM-Repository\Tyrellls150gNaked.png" />
-                                      <entry key="outputName" value="tyrells" />
+                                      <entry key="cropped" value="true" />
+                                      <entry key="iconShape" value="NONE" />
+                                      <entry key="imageAsset" value="D:\IHM-Repository\Capture.PNG" />
+                                      <entry key="outputName" value="avatar" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -121,11 +138,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="22" />
-                            <entry key="outputName" value="ic_salt_22dp" />
+                            <entry key="height" value="20" />
+                            <entry key="outputName" value="ic_warning" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="D:\IHM-Repository\salt.svg" />
-                            <entry key="width" value="22" />
+                            <entry key="sourceFile" value="D:\IHM-Repository\warning.svg" />
+                            <entry key="width" value="20" />
                           </map>
                         </option>
                       </PersistentState>

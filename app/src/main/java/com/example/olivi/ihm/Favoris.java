@@ -20,9 +20,9 @@ public class Favoris extends ListFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        String[] products = {"Lays Classic","Pizza 4 saisons","Houmous Carrefour"};
-        int[] values = {1,4,3};
-        int[] images = {R.mipmap.lays_light, R.mipmap.pizza, R.mipmap.houmous};
+        String[] products = {"Lays Classic","Pizza 4 saisons"};
+        int[] values = {1,4};
+        int[] images = {R.mipmap.lays_light, R.mipmap.pizza};
         ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values, images, this);
         View rootView = inflater.inflate(R.layout.historique, container, false);
 /*        TextView title = rootView.findViewById(R.id.textView);
