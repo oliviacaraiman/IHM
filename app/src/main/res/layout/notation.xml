@@ -18,10 +18,9 @@
             android:id="@+id/textView10"
             style="@style/title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_height="45dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="25dp"
             android:text="Notation" />
 
         <TextView
@@ -31,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView10"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="15dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus ex sit amet sapien volutpat, id semper velit lacinia. Duis eu nisl quis elit egestas suscipit. Vivamus vitae lacus laoreet, tempus mauris quis, molestie justo. Ut pulvinar sapien et dolor egestas rutrum. Donec ut hendrerit lorem, in mollis elit. Proin erat mi, porta ut molestie vel, pellentesque id ex. Nam laoreet neque ac cursus viverra. Donec consequat mauris ligula, vitae scelerisque leo sodales eget. Ut auctor, nulla dignissim laoreet pellentesque, dolor nisl suscipit metus, vitae gravida lacus libero nec metus. Curabitur id nunc semper, auctor lorem non, porta eros. Nullam luctus velit a euismod varius. Maecenas pretium convallis ullamcorper. Aliquam nec elit leo. Proin velit felis, tincidunt in faucibus et, fermentum vel ligula. Ut vulputate pretium cursus. Pellentesque convallis luctus libero in malesuada." />
 
         <ImageButton
@@ -40,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/textView11"
             android:layout_alignTop="@+id/textView10"
-            app:srcCompat="?attr/homeAsUpIndicator" />
+            app:srcCompat="@drawable/ic_back" />
     </RelativeLayout>
 
 </RelativeLayout>
