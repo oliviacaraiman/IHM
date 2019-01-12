@@ -10,15 +10,7 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        style="@style/title"
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:layout_marginTop="10dp"
-
-        android:text="Historique"
-        tools:textAlignment="center" />
+    <include layout="@layout/toolbar"/>
 
     <RelativeLayout
         android:id="@+id/historique"

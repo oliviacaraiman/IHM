@@ -2,6 +2,8 @@ package com.example.olivi.ihm;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +25,11 @@ public class Favoris extends ListFragment {
         int[] images = {R.mipmap.lays_light, R.mipmap.pizza, R.mipmap.houmous};
         ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values, images, this);
         View rootView = inflater.inflate(R.layout.historique, container, false);
-        TextView title = rootView.findViewById(R.id.textView);
-        title.setText("Favoris");
+/*        TextView title = rootView.findViewById(R.id.textView);
+        title.setText("Favoris");*/
         setListAdapter(adapter);
+
+
         return rootView;
     }
     @Override

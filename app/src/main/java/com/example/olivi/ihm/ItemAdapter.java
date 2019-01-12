@@ -44,23 +44,32 @@ import android.widget.TextView;
             final View rowView = inflater.inflate(R.layout.historique_item, parent, false);
             TextView textView = (TextView) rowView.findViewById(R.id.label);
             ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-            ProgressBar progressBar = rowView.findViewById(R.id.progressBar);
+            ProgressBar progressBar = rowView.findViewById(R.id.progressBar4);
             textView.setText(products[position]);
             textView.setTextSize(16);
             imageView.setImageResource(images[position]);
             progressBar.setProgress(barValues[position]);
             progressBar.setMax(5);
 
+            TextView note = (TextView) rowView.findViewById(R.id.noteText);
+            TextView noteColor = (TextView) rowView.findViewById(R.id.noteColor);
+
             if (barValues[position] < 3) {
                 progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#c3212c")));
                 progressBar.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#c3212c")));
+                note.setText(barValues[position] + "/5 Mauvais ");
+                noteColor.setBackgroundColor(Color.parseColor("#c3212c"));
             } else if ((barValues[position] < 4) && (barValues[position] >=3)) {
                 progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#FFE9C563")));
                 progressBar.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFE9C563")));
+                note.setText(barValues[position] + "/5 Moyen ");
+                noteColor.setBackgroundColor(Color.parseColor("#FFE9C563"));
             }
             else {
                 progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#FF8AAC2D")));
                 progressBar.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FF8AAC2D")));
+                note.setText(barValues[position] + "/5 Bon ");
+                noteColor.setBackgroundColor(Color.parseColor("#FF8AAC2D"));
             }
 
             Button button = (Button)rowView.findViewById(R.id.buttonDetails);
