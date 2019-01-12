@@ -14,9 +14,9 @@ public class Alternative extends ListFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        String[] products = {"Lays Classic"};
-        int[] values = {1};
-        int[] images = {R.mipmap.lays_light};
+        String[] products = {"Tyrrell's naked"};
+        int[] values = {4};
+        int[] images = {R.mipmap.tyrells};
         ItemAdapter adapter = new ItemAdapter(this.getContext(), products, values, images, this);
         View rootView = inflater.inflate(R.layout.historique, container, false);
         TextView title = rootView.findViewById(R.id.textView);
