@@ -45,6 +45,17 @@ public class DetailsProduits extends Fragment{
             }
         });
 
+        AppCompatImageButton button2 = (AppCompatImageButton) view.findViewById(R.id.imageButton3);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                android.support.v4.app.FragmentTransaction ft;
+                ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content, new Alternative());
+                ft.commit();
+            }
+        });
+
         Spinner spinner = (Spinner)view.findViewById(R.id.spinner);
         //Création d'une liste d'élément à mettre dans le Spinner(pour l'exemple)
         List defautsList = new ArrayList();
